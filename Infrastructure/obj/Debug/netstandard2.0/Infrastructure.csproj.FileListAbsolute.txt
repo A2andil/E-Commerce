@@ -1,0 +1,12 @@
+D:\Github\Souq\E-Commerce\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.deps.json
+D:\Github\Souq\E-Commerce\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.dll
+D:\Github\Souq\E-Commerce\Infrastructure\bin\Debug\netstandard2.0\Infrastructure.pdb
+D:\Github\Souq\E-Commerce\Infrastructure\bin\Debug\netstandard2.0\Core.dll
+D:\Github\Souq\E-Commerce\Infrastructure\bin\Debug\netstandard2.0\Core.pdb
+D:\Github\Souq\E-Commerce\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csprojAssemblyReference.cache
+D:\Github\Souq\E-Commerce\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.AssemblyInfoInputs.cache
+D:\Github\Souq\E-Commerce\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.AssemblyInfo.cs
+D:\Github\Souq\E-Commerce\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csproj.CopyComplete
+D:\Github\Souq\E-Commerce\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.dll
+D:\Github\Souq\E-Commerce\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.pdb
+D:\Github\Souq\E-Commerce\Infrastructure\obj\Debug\netstandard2.0\Infrastructure.csproj.CoreCompileInputs.cache
