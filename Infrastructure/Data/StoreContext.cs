@@ -25,16 +25,16 @@ namespace Infrastructure.Data
 
             // You can globally assign schema here
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-            modelBuilder.HasDefaultSchema("Security");
+            //modelBuilder.HasDefaultSchema("Security");
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer(@"Server =.; Database = souq_22; Trusted_Connection = True;MultipleActiveResultSets=true");
-            }
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+        //        optionsBuilder.UseSqlServer(@"Server=(localdb)\\MSSQLLocalDB;Database=souq_db;Trusted_Connection=True;MultipleActiveResultSets=true");
+        //    }
+        //}
 
 
 

@@ -32,7 +32,7 @@ namespace Souq
             services.AddControllers();
             services.AddDbContext<StoreContext>(x =>
             {
-                x.UseSqlServer(@"Server =.; Database = souq_22; Trusted_Connection = True; MultipleActiveResultSets = true");
+                x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
         }
 
