@@ -31,5 +31,18 @@ namespace Souq.Controllers
             var products = await _repo.GetProductsAsync();
             return Ok(products);
         }
+
+        [HttpGet("brands")]
+        public async Task<ActionResult<ProductBrand>> GetBrands()
+        {
+            return Ok(await _repo.GetProductBrandAsync());
+        }
+
+
+        [HttpGet("types")]
+        public async Task<ActionResult<ProductBrand>> GetTypes()
+        {
+            return Ok(await _repo.GetProductTypesAsync());
+        }
     }
 }
