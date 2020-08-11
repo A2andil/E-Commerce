@@ -29,6 +29,7 @@ namespace Souq
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericReposotory<>));
             services.AddControllers();
             services.AddDbContext<StoreContext>(x =>
             {
