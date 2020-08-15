@@ -10,7 +10,8 @@ namespace Souq.Helpers
         {
             CreateMap<Product, ProductToReturnDto>()
                 .ForMember(x => x.ProductBrand, o => o.MapFrom(x => x.ProductBrand.Name))
-                .ForMember(x => x.ProductType, o => o.MapFrom(x => x.ProductType.Name));
+                .ForMember(x => x.ProductType, o => o.MapFrom(x => x.ProductType.Name))
+                .ForMember(x => x.PictureUrl, o => o.MapFrom<ProductUrlResolver>());
         }
     }
 }
