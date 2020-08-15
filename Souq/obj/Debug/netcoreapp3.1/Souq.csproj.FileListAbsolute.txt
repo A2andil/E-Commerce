@@ -315,8 +315,6 @@ C:\Users\A2andil\Github\E-Commerce\Souq\bin\Debug\netcoreapp3.1\Core.pdb
 C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\Souq.csprojAssemblyReference.cache
 C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\Souq.AssemblyInfoInputs.cache
 C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\Souq.AssemblyInfo.cs
-C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\Souq.csproj.CoreCompileInputs.cache
-C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\Souq.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\Souq.RazorTargetAssemblyInfo.cache
 C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\Souq.csproj.CopyComplete
 C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\staticwebassets\Souq.StaticWebAssets.Manifest.cache
@@ -457,3 +455,7 @@ C:\Users\A2andil\Github\crepixa\E-Learning\Souq\obj\Debug\netcoreapp3.1\staticwe
 C:\Users\A2andil\Github\crepixa\E-Learning\Souq\obj\Debug\netcoreapp3.1\Souq.dll
 C:\Users\A2andil\Github\crepixa\E-Learning\Souq\obj\Debug\netcoreapp3.1\Souq.pdb
 C:\Users\A2andil\Github\crepixa\E-Learning\Souq\obj\Debug\netcoreapp3.1\Souq.genruntimeconfig.cache
+C:\Users\A2andil\Github\E-Commerce\Souq\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\A2andil\Github\E-Commerce\Souq\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\Souq.csproj.CoreCompileInputs.cache
+C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\Souq.MvcApplicationPartsAssemblyInfo.cache

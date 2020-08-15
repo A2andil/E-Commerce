@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specification;
@@ -18,13 +19,17 @@ namespace Souq.Controllers
         private readonly IGenericRepository<Product> _productRepo;
         private readonly IGenericRepository<ProductType> _productTypeRepo;
         private readonly IGenericRepository<ProductBrand> _productBrandRepo;
+        private readonly IMapper _mapper;
+
         public ProductsController(IGenericRepository<Product> productRepo,
             IGenericRepository<ProductType> productTypeRepo,
-            IGenericRepository<ProductBrand> productBrandRepo)
+            IGenericRepository<ProductBrand> productBrandRepo,
+            IMapper mapper)
         {
             _productRepo = productRepo;
             _productTypeRepo = productTypeRepo;
             _productBrandRepo = productBrandRepo;
+            _mapper = mapper;
         }
 
         [HttpGet("{id}")]
@@ -34,16 +39,7 @@ namespace Souq.Controllers
 
             var product =  await _productRepo.GetEntityWithSpec(spec);
 
-            return new ProductToReturnDto
-            {
-                Id = product.Id,
-                Name = product.Name,
-                Description = product.Description,
-                Price = product.Price,
-                PictureUrl = product.PictureUrl,
-                ProductBrand = product.ProductBrand.Name,
-                ProductType = product.ProductType.Name
-            };
+            return _mapper.Map<Product, ProductToReturnDto>(product);
         }
 
         [HttpGet]
