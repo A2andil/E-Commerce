@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Infrastructure.Data;
-using Microsoft.AspNetCore.Http;
+﻿using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
+using Souq.Errors;
 
 namespace Souq.Controllers
 {
@@ -20,8 +16,7 @@ namespace Souq.Controllers
         public ActionResult GetNotFoundRequest()
         {
             var thing = _context.Products.Find(42);
-            if (thing == null)
-                return NotFound();
+            if (thing == null) return NotFound(new ApiResponse(404));
             return Ok();
         }
 
@@ -36,7 +31,7 @@ namespace Souq.Controllers
         [HttpGet("badrequest")]
         public ActionResult GetBadRequest()
         {
-            return BadRequest();
+            return BadRequest(new ApiResponse(400));
         }
     }
 }
