@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Souq.Errors;
 using Souq.Helpers;
 using Souq.Middleware;
 using System.Linq;
+using System.Reflection;
 
 namespace Souq
 {
@@ -51,6 +51,15 @@ namespace Souq
                     return new BadRequestObjectResult(errorResponse);
                 }
             );
+
+            services.AddSwaggerGen(c =>
+                c.SwaggerDoc("v1",
+                new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = "Souq Api",
+                    Version = "v1"
+                })
+            ); ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +75,12 @@ namespace Souq
             app.UseStaticFiles();
 
             app.UseAuthorization();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SKiNet API v1");
+            });
 
             app.UseEndpoints(endpoints =>
             {
