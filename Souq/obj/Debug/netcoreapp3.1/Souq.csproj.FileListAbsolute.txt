@@ -457,5 +457,10 @@ C:\Users\A2andil\Github\crepixa\E-Learning\Souq\obj\Debug\netcoreapp3.1\Souq.pdb
 C:\Users\A2andil\Github\crepixa\E-Learning\Souq\obj\Debug\netcoreapp3.1\Souq.genruntimeconfig.cache
 C:\Users\A2andil\Github\E-Commerce\Souq\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\A2andil\Github\E-Commerce\Souq\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\A2andil\Github\E-Commerce\Souq\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\A2andil\Github\E-Commerce\Souq\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\A2andil\Github\E-Commerce\Souq\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\A2andil\Github\E-Commerce\Souq\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\Souq.csproj.CoreCompileInputs.cache
+C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\Souq.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\A2andil\Github\E-Commerce\Souq\obj\Debug\netcoreapp3.1\Souq.MvcApplicationPartsAssemblyInfo.cache
