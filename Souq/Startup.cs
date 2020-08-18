@@ -30,14 +30,8 @@ namespace Souq
 
             services.AddApplicationService();
 
-            services.AddSwaggerGen(c =>
-                c.SwaggerDoc("v1",
-                new Microsoft.OpenApi.Models.OpenApiInfo
-                {
-                    Title = "Souq Api",
-                    Version = "v1"
-                })
-            ); ;
+            services.AddSwaggerDocumentation();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,11 +48,7 @@ namespace Souq
 
             app.UseAuthorization();
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SKiNet API v1");
-            });
+            app.UseSwaggerDocumentation();
 
             app.UseEndpoints(endpoints =>
             {
