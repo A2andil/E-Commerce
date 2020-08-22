@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Souq.Dtos;
 using Souq.Errors;
+using Souq.Helpers;
 
 namespace Souq.Controllers
 {
@@ -46,11 +47,12 @@ namespace Souq.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<ProductToReturnDto>> GetProducts(
+        public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts(
             [FromBody]ProductSpecParms parms)
-        
         {
             var spec = new ProductsWithTypesAndBrandsSpecification(parms);
+
+            //var count
             var products = await _productRepo.ListAsync(spec);
             return Ok(_mapper
                 .Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products));

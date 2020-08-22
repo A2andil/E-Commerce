@@ -24,5 +24,13 @@ namespace Core.Specification
         public int? TypeId { get; set; }
 
         public string Sort { get; set; }
+
+        public string _search { get; set; }
+
+        public string Search
+        {
+            get => _search;
+            set => _search = value.ToLower();
+        }
     }
 }
