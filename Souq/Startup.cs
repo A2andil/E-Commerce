@@ -33,13 +33,14 @@ namespace Souq
             services.AddSwaggerDocumentation();
 
             services.AddCors(opt =>
-               opt.AddPolicy("CorsPolicy", policy =>
-               {
-                   policy.AllowAnyHeader()
-                   .AllowAnyMethod()
-                   .WithOrigins("https://localhost:4200");
-               });
-            ;
+            {
+                opt.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .WithOrigins("https://localhost:4200");
+                });
+            });
 
         }
 
@@ -54,6 +55,8 @@ namespace Souq
 
             app.UseRouting();
             app.UseStaticFiles();
+
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
