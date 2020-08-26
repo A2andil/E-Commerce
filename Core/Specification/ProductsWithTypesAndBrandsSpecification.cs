@@ -10,8 +10,7 @@ namespace Core.Specification
     {
         public ProductsWithTypesAndBrandsSpecification(ProductSpecParms parms)
             : base(x => 
-            (string.IsNullOrEmpty(parms.Search) || x.Name.ToLower().Contains(parms.Search)) 
-            && (!parms.TypeId.HasValue || x.ProductTypeId == parms.TypeId)
+            (!parms.TypeId.HasValue || x.ProductTypeId == parms.TypeId)
             && (!parms.BrandId.HasValue || x.ProductBrandId == parms.BrandId))
         {
             AddInclude(x => x.ProductType);

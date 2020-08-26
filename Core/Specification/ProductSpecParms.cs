@@ -25,12 +25,12 @@ namespace Core.Specification
 
         public string Sort { get; set; }
 
-        public string _search { get; set; }
+        //public string _search { get; set; }
 
-        public string Search
-        {
-            get => _search;
-            set => _search = value.ToLower();
-        }
+        //public string Search
+        //{
+        //    get => _search;
+        //    set => _search = value.ToLower();
+        //}
     }
 }
