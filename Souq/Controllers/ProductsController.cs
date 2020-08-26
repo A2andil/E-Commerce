@@ -47,12 +47,9 @@ namespace Souq.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts()
-        {
-            ProductSpecParms parms = new ProductSpecParms
-            {
-                Sort = "priceAsc"
-            };
+        public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts(
+            [FromQuery]ProductSpecParms parms)
+        { 
             var spec = new ProductsWithTypesAndBrandsSpecification(parms);
 
             //var count
