@@ -55,7 +55,7 @@ namespace Souq.Controllers
 
             var countSpec = new ProductWithFiltersForCountSpecification(parms);
 
-            var totalItems = await _productRepo.CountAsync(spec);
+            var totalItems = await _productRepo.CountAsync(countSpec);
 
             //var count
             var products = await _productRepo.ListAsync(spec);
