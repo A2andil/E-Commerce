@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using AutoMapper;
 using Core.Entities;
@@ -39,7 +40,7 @@ namespace Souq.Controllers
         {
             var spec = new ProductsWithTypesAndBrandsSpecification(id);
 
-            var product =  await _productRepo.GetEntityWithSpec(spec);
+            var product = await _productRepo.GetEntityWithSpec(spec);
 
             if (product == null) return NotFound(new ApiResponse(404));
 
@@ -48,14 +49,21 @@ namespace Souq.Controllers
 
         [HttpGet]
         public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts(
-            [FromQuery]ProductSpecParms parms)
-        { 
+            [FromQuery] ProductSpecParms parms)
+        {
             var spec = new ProductsWithTypesAndBrandsSpecification(parms);
+
+            var countSpec = new ProductWithFiltersForCountSpecification(parms);
+
+            var totalItems = await _productRepo.CountAsync(spec);
 
             //var count
             var products = await _productRepo.ListAsync(spec);
-            return Ok(_mapper
-                .Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products));
+
+            var data = _mapper
+                 .Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products);
+
+            return Ok(new Pagination<ProductToReturnDto>(parms.PageIndex, parms.PageSize, totalItems, data));
         }
 
         [HttpGet("brands")]
