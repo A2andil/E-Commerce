@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Http.Headers;
-using System.Text;
-
-namespace Core.Specification
+﻿namespace Core.Specification
 {
     public class ProductSpecParms
     {
