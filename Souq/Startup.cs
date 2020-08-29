@@ -38,7 +38,7 @@ namespace Souq
                 {
                     policy.AllowAnyHeader()
                     .AllowAnyMethod()
-                    .WithOrigins("https://localhost:4200");
+                    .AllowAnyOrigin();
                 });
             });
 
