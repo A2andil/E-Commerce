@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { IProduct } from './shared/models/product';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +7,6 @@ import { IProduct } from './shared/models/product';
 })
 export class AppComponent implements OnInit {
   title = 'Souq';
-  products : IProduct[];
 
   constructor() {}
 

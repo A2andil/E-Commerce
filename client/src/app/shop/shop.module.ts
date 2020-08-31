@@ -9,6 +9,7 @@ import { ShopService  } from "./shop.service";
   imports: [
     CommonModule,
     ShopService
-  ]
+  ],
+  exports: [ShopComponent]
 })
 export class ShopModule { }
