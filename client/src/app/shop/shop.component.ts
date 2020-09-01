@@ -71,5 +71,4 @@ export class ShopComponent implements OnInit {
     this.sortSelect = sort;
     this.getProducts();
   }
-
 }
