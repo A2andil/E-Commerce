@@ -10,14 +10,20 @@
 
             <h5 class="text-warning">Brands</h5>
             <ul class="list-group">
-                <li class="list-group-item" *ngFor = "let brand of brands">
+                <li class="list-group-item" *ngFor = "let brand of brands"
+                [class.active] = "brand.id === this.brandIdSelected"
+                [value] = "brand.id"
+                (click)="onBrandIdSelected(brand.id)">
                     {{ brand.name }}
                 </li>
               </ul>
 
               <h5 class="text-warning">Types</h5>
               <ul class="list-group my-3">
-                <li class="list-group-item" *ngFor = "let type of Types">
+                <li class="list-group-item" *ngFor = "let type of Types"
+                [class.active] = "type.id === this.typeIdSelected"
+                [value] = "type.id"
+                (click)="onTypeIdSelected(type.id)">
                     {{type.name}}
                 </li>
                 
