@@ -30,9 +30,8 @@ export class ShopService {
       params = params.append('brandId', shopParams.brandId.toString());
     }
 
-    if (shopParams.sort) {
-      params = params.append('sort', shopParams.sort);
-    }
+    params = params.append('sort', shopParams.sort);
+    params = params.append('pageIndex', shopParams.pageNumber.toString());
 
     if (shopParams.pageSize != 0) {
       params = params.append('pageSize', shopParams.pageSize.toString());
@@ -45,7 +44,7 @@ export class ShopService {
               return response.body;
             })
         );
-  }
+    }
 
   getBrands() {
     return this.http.get<IBrand[]>(this.baseUrl + 'products/brands');

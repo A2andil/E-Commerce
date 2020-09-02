@@ -51,6 +51,8 @@
                 <pagination 
                     [boundaryLinks]="true" 
                     [totalItems]="this.shopParams.totalCount"
+                    (pageChanged) = "onPageChanged($event)"
+                    [itemsPerPage] = "this.shopParams.pageSize"
                     previousText="&lsaquo;" 
                     nextText="&rsaquo;"  
                     firstText="&laquo;"
