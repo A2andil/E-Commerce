@@ -32,6 +32,7 @@ export class ShopService {
 
     params = params.append('sort', shopParams.sort);
     params = params.append('pageIndex', shopParams.pageNumber.toString());
+    params = params.append('pageIndex', shopParams.pageSize.toString());
 
     if (shopParams.pageSize != 0) {
       params = params.append('pageSize', shopParams.pageSize.toString());
