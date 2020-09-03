@@ -61,7 +61,6 @@ export class ShopComponent implements OnInit {
   onBrandIdSelected(id: number) {
     this.shopParams.brandId = id;
     this.getProducts();
-    //console.log(id);
   }
 
   onTypeIdSelected(id: number) {
