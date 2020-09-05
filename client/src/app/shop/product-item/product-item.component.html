@@ -1,15 +1,16 @@
 <div class="card mr-2" style="width: 18rem; min-height: 300px;">
-    <img class="card-img-top" src="{{product.pictureUrl}}" alt="img-fluid bg-light">
+    <img class="card-img-top" src="{{product.pictureUrl}}" 
+        alt="img-fluid bg-light" >
     <div class="card-body">
       <h5 class="card-title">
-          <a href="#">
-            <h6 class="text-uppercase">{{product.name}}</h6>
+          <a routerLink="/shop/{{product.id}}">
+            <h6 class="text-uppercase">{{ product.name }}</h6>
           </a>
       </h5>
       <p class="card-text">{{ product.price | currency }}</p>
       <div class="btn-group mt-auto">
         <button type="button" class="btn btn-outline-secondary fa fa-shopping-cart"></button>
-        <button type="button" class="btn btn-outline-secondary">View</button>
+        <button type="button" routerLink="/shop/{{product.id}}" class="btn btn-outline-secondary">View</button>
       </div>
     </div>
 </div>
