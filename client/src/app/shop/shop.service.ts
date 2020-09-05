@@ -34,6 +34,9 @@ export class ShopService {
     params = params.append('pageIndex', shopParams.pageNumber.toString());
     params = params.append('pageIndex', shopParams.pageSize.toString());
 
+    if (shopParams.search) {
+      params = params.append('search', shopParams.search.toString());
+    }
     if (shopParams.pageSize != 0) {
       params = params.append('pageSize', shopParams.pageSize.toString());
     }
