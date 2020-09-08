@@ -5,7 +5,7 @@ import { ShopService  } from "./shop.service";
 import { ProductItemComponent } from './product-item/product-item.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-import { RouterModule } from '@angular/router';
+import { ShopRouteModule } from './shop-routing.module';
 
 
 @NgModule({
@@ -14,8 +14,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     ShopService,
     SharedModule,
-    RouterModule
-  ],
-  exports: [ShopComponent]
+    ShopRouteModule
+  ]
 })
 export class ShopModule { }
