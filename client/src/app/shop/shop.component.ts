@@ -11,7 +11,7 @@ import { ShopParams } from '../shared/models/shopParms';
   styleUrls: ['./shop.component.scss']
 })
 export class ShopComponent implements OnInit {
-  @ViewChild('search', {static: true}) searchTerm: ElementRef;
+  @ViewChild('search', {static: false}) searchTerm: ElementRef;
   shopParams = new ShopParams();
   products: IProduct[];
   brands: IBrand[];
@@ -45,7 +45,6 @@ export class ShopComponent implements OnInit {
   getBrands() {
     this.shopService.getBrands().subscribe(response => {
       this.brands = [{id: 0, name: 'All'}, ...response];
-      //console.log(response);
     }, error=> {
       console.log(error);
     })
