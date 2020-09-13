@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Souq.Extensions;
 using Souq.Middleware;
+using StackExchange.Redis;
 
 namespace Souq
 {
@@ -31,6 +32,13 @@ namespace Souq
             services.AddApplicationService();
 
             services.AddSwaggerDocumentation();
+
+            services.AddSingleton<ConnectionMultiplexer>(c =>
+            {
+                var configuration = ConfigurationOptions
+                    .Parse(Configuration.GetConnectionString("Redis"), true);
+                return ConnectionMultiplexer.Connect(configuration);
+            });
 
             services.AddCors(opt =>
             {
