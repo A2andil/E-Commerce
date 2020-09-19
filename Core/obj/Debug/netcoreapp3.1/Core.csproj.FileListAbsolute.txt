@@ -22,7 +22,6 @@ C:\Users\A2andil\Github\E-Commerce\Core\bin\Debug\netcoreapp3.1\Core.pdb
 C:\Users\A2andil\Github\E-Commerce\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
 C:\Users\A2andil\Github\E-Commerce\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
 C:\Users\A2andil\Github\E-Commerce\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
-C:\Users\A2andil\Github\E-Commerce\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
 C:\Users\A2andil\Github\E-Commerce\Core\obj\Debug\netcoreapp3.1\Core.dll
 C:\Users\A2andil\Github\E-Commerce\Core\obj\Debug\netcoreapp3.1\Core.pdb
 C:\Users\A2andil\Github\crepixa\E-Learning\Core\bin\Debug\netcoreapp3.1\Core.deps.json
@@ -34,3 +33,4 @@ C:\Users\A2andil\Github\crepixa\E-Learning\Core\obj\Debug\netcoreapp3.1\Core.Ass
 C:\Users\A2andil\Github\crepixa\E-Learning\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
 C:\Users\A2andil\Github\crepixa\E-Learning\Core\obj\Debug\netcoreapp3.1\Core.dll
 C:\Users\A2andil\Github\crepixa\E-Learning\Core\obj\Debug\netcoreapp3.1\Core.pdb
+C:\Users\A2andil\Github\E-Commerce\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache

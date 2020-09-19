@@ -2717,6 +2717,9 @@
       "Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6"
+        },
         "compile": {
           "bin/placeholder/Core.dll": {}
         },
@@ -8870,6 +8873,7 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.0.1",
       "Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.6",
+      "Microsoft.EntityFrameworkCore.SqlServer.Design >= 1.1.6",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
       "Swashbuckle.AspNetCore.Swagger >= 5.5.1",
       "Swashbuckle.AspNetCore.SwaggerGen >= 5.5.1",
@@ -8930,6 +8934,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[3.1.6, )"
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+            "target": "Package",
+            "version": "[1.1.6, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",

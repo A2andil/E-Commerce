@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Souq.Errors;
 using Souq.Helpers;
 using System.Linq;
+using StackExchange.Redis;
 
 namespace Souq.Extensions
 {
@@ -15,6 +16,7 @@ namespace Souq.Extensions
         {
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericReposotory<>));
+            services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddAutoMapper(typeof(MappingProfiles));
 
             services.Configure<ApiBehaviorOptions>(options =>

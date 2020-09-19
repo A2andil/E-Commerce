@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Net.Security;
-using System.Text;
 
 namespace Core.Specification
 {

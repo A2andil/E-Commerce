@@ -24,23 +24,23 @@ namespace Souq
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IBasketRepository, IBasketRepository>();
             services.AddDbContext<StoreContext>(x =>
             {
                 x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
 
 
+
             services.AddApplicationService();
 
             services.AddSwaggerDocumentation();
 
-            services.AddSingleton<ConnectionMultiplexer>(c =>
-            {
-                var configuration = ConfigurationOptions
-                    .Parse(Configuration.GetConnectionString("Redis"), true);
-                return ConnectionMultiplexer.Connect(configuration);
-            });
+            //services.AddSingleton<IConnectionMultiplexer>(c =>
+            //{
+            //    var configuration = ConfigurationOptions
+            //        .Parse(Configuration.GetConnectionString("Redis"), true);
+            //    return ConnectionMultiplexer.Connect(configuration);
+            //});
 
             services.AddCors(opt =>
             {
